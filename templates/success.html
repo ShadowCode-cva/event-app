@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Success</title>
+    <style>
+        body {
+            font-family: 'Segoe UI';
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+
+        .box {
+            backdrop-filter: blur(12px);
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>🎉 Registration Successful!</h2>
+
+    <p>Thank you <b>{{ name }}</b> for registering to <b>{{ event }}</b></p>
+
+    <br>
+    <a href="/">Go Home</a><br>
+    <a href="/admin">View Admin</a>
+</div>
+
+</body>
+</html>

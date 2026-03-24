@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin</title>
+    <style>
+        body {
+            font-family: 'Segoe UI';
+            background: #f4f6f8;
+        }
+
+        .navbar {
+            background: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        table {
+            width: 95%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th {
+            background: #667eea;
+            color: white;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <h3>Admin Dashboard</h3>
+    <div>
+        <a href="/">Home</a> |
+        <a href="/admin/search">Search</a>
+    </div>
+</div>
+
+<h3 style="text-align:center;">Total: {{ count }}</h3>
+
+<table>
+<tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Dept</th>
+    <th>Event</th>
+    <th>Time</th>
+</tr>
+
+{% for user in data %}
+<tr>
+    <td>{{ user.name }}</td>
+    <td>{{ user.email }}</td>
+    <td>{{ user.dept }}</td>
+    <td>{{ user.event }}</td>
+    <td>{{ user.registered_at | format_time }}</td>
+</tr>
+{% endfor %}
+</table>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Portal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            margin-left: 15px;
+            text-decoration: none;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 15px;
+            width: 250px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.03);
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: white;
+            color: #333;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        /* Mobile */
+        @media(max-width: 600px) {
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <h2>EventHub</h2>
+    <div class="nav-links">
+        <a href="/admin">Admin</a>
+    </div>
+</div>
+
+<div class="hero">
+    <h1>Explore Events</h1>
+    <p>Register seamlessly for your favorite events</p>
+</div>
+
+<div class="cards">
+    <div class="card">
+        <h3>Hackathon</h3>
+        <a href="/event?event=Hackathon" class="btn">Register</a>
+    </div>
+    <div class="card">
+        <h3>Workshop</h3>
+        <a href="/event?event=Workshop" class="btn">Register</a>
+    </div>
+    <div class="card">
+        <h3>Symposium</h3>
+        <a href="/event?event=Symposium" class="btn">Register</a>
+    </div>
+</div>
+
+</body>
+</html>
